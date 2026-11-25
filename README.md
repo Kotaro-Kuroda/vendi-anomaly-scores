@@ -27,6 +27,30 @@ The optional ImageNet embedding helper script needs extra packages that are not 
 - `datasets`
 - `huggingface-hub`
 
+## 画像データセット点検アプリ
+
+Python 3.13 と uv を用意し、リポジトリのルートで起動します。
+
+```bash
+uv run streamlit run app.py
+```
+
+ブラウザで画像フォルダを選び、「解析」を押します。JPEG、PNG、WebP に対応しています。初回の DINOv2 モデル取得にはインターネット接続が必要です。CUDA を利用できる場合は GPU で、その他の場合は CPU で解析します。
+
+クラス別に確認する場合は、次の例の `dataset` を選択します。
+
+```text
+dataset/
+  cat/
+    001.jpg
+    002.jpg
+  dog/
+    001.jpg
+    002.jpg
+```
+
+「全体の外れ値」には全画像が VAS の降順で表示されます。「ラベル付けミス候補」では、選択したクラスの画像を同じクラスの画像と比較したスコアで並べます。フォルダ直下の画像は全体のランキングに含まれます。スコアの高い画像から目視で確認してください。
+
 ## Methods
 
 Methods in this repo:

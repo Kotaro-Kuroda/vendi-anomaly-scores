@@ -1,0 +1,21 @@
+[project]
+name = "vendi-anomaly-scores"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "deepod>=0.2.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.2",
+    "numpy",
+    "pandas>=3.1.1",
+    "pillow",
+    "pyod>=3.6.9",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.67",
+    "torch>=2.15.0",
+    "torchgmm>=0.1.5",
+    "torchvision>=0.29.2",
+    "tqdm>=4.70.1",
+]
